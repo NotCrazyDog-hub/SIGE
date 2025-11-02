@@ -1,5 +1,5 @@
 <h1>Cadastro de estagiários</h1>
-<form action="{{ route('interns.store') }}" method="get">
+<form action="{{ route('interns.store') }}" method="post">
     @csrf
     <input type="text" name="name" placeholder="Insira seu nome">
     <br>
