@@ -13,4 +13,8 @@ class Intern extends Model
             'phone',
             'status',
     ];
+
+    protected $casts = [
+        'status' => 'boolean'
+    ];
 }
