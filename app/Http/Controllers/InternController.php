@@ -65,6 +65,8 @@ class InternController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $intern = Intern::findOrFail($id);
+        $intern->delete();
+        return redirect()->back();
     }
 }
