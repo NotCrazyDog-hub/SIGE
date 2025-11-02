@@ -46,7 +46,8 @@ class InternController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $intern = Intern::findOrFail($id);
+        return view('interns.edit', compact('intern'));
     }
 
     /**
