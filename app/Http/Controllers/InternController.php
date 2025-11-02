@@ -12,7 +12,8 @@ class InternController extends Controller
      */
     public function index()
     {
-        //
+        $interns = Intern::all();
+        return view('interns.index', compact('interns'));
     }
 
     /**
