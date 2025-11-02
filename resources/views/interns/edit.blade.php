@@ -1,5 +1,5 @@
 <h1>Cadastro de estagiários</h1>
-<form action="{{ route('interns.edit', ['intern' => $intern->id]) }}" method="post">
+<form action="{{ route('interns.update', ['intern' => $intern->id]) }}" method="post">
     @csrf
     @method('PUT')
     <input type="text" name="name" value="{{ $intern->name }}">
