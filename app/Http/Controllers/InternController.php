@@ -55,7 +55,9 @@ class InternController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $intern = Intern::findOrFail($id);
+        $intern->update($request->except('_token', '_method'));
+        return redirect()->route('interns.index');
     }
 
     /**
