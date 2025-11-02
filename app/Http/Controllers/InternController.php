@@ -21,7 +21,7 @@ class InternController extends Controller
      */
     public function create()
     {
-        //
+        return view('interns.create');
     }
 
     /**
