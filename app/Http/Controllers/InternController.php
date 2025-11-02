@@ -29,7 +29,8 @@ class InternController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $intern = Intern::create($request->all());
+        return redirect()->route('interns.index');
     }
 
     /**
