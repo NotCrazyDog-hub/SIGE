@@ -29,7 +29,8 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $department = Department::create($request->all());
+        return redirect()->route('departments.index');
     }
 
     /**
