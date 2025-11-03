@@ -55,7 +55,9 @@ class DepartmentController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $department = Department::findOrFail($id);
+        $department->update($request->except(['_token', '_method']));
+        return redirect()->route('departments.index');
     }
 
     /**
