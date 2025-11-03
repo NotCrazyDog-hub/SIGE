@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('interns', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('course');
             $table->string('phone');
             $table->boolean('status')->default(true);
