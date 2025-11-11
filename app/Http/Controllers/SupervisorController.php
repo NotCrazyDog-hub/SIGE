@@ -31,7 +31,8 @@ class SupervisorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $supervisor = Supervisor::create($request->all());
+        return redirect()->route('supervisors.index');
     }
 
     /**
