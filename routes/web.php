@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InternController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\SupervisorController;
 
 Route::get('/', function () {
     return view('welcome');
