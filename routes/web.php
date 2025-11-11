@@ -24,3 +24,11 @@ Route::get('/departments/{department}', [DepartmentController::class, 'show'])->
 Route::get('/departments/{department}/edit', [DepartmentController::class, 'edit'])->name('departments.edit');
 Route::put('/departments/{department}', [DepartmentController::class, 'update'])->name('departments.update');
 Route::delete('/departments/{department}', [DepartmentController::class, 'destroy'])->name('departments.destroy');
+
+Route::get('/supervisors', [SupervisorController::class, 'index'])->name('supervisors.index');
+Route::get('/supervisors/create', [SupervisorController::class, 'create'])->name('supervisors.create');
+Route::post('/supervisors', [SupervisorController::class, 'store'])->name('supervisors.store');
+Route::get('/supervisors/{supervisor}', [SupervisorController::class, 'show'])->name('supervisors.show');
+Route::get('/supervisors/{supervisor}/edit', [SupervisorController::class, 'edit'])->name('supervisors.edit');
+Route::put('/supervisors/{supervisor}', [SupervisorController::class, 'update'])->name('supervisors.update');
+Route::delete('/supervisors/{supervisor}', [SupervisorController::class, 'destroy'])->name('supervisors.destroy');
