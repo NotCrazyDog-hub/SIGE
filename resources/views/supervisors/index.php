@@ -1,5 +1,5 @@
 <h1>Listagem de supervisores</h1>
-<a href="">+ Adicionar</a>
+<a href="{{ route('supervisors.create') }}">+ Adicionar</a>
 @foreach ()
     <p> | <a href="">✏</a> | <form action="" method="post">
         @csrf
