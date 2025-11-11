@@ -21,7 +21,8 @@ class SupervisorController extends Controller
      */
     public function create()
     {
-        //
+        $departments = Department::all();
+        return view('supervisors.create', compact('departments'));
     }
 
     /**
