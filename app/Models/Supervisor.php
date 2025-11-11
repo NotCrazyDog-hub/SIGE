@@ -10,4 +10,11 @@ class Supervisor extends Model
     {
         return $this->belongsTo(Department::class);
     }
+
+    protected $fillable = [
+        'name',
+        'email',
+        'department_id',
+        'phone',
+    ];
 }
