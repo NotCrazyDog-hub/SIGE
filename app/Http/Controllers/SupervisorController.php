@@ -48,7 +48,9 @@ class SupervisorController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $supervisor = Supervisor::findOrFail($id);
+        $departments = Department::all();
+        return view('supervisors.edit', compact('supervisor', 'departments'));
     }
 
     /**
