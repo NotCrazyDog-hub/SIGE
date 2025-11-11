@@ -12,7 +12,8 @@ class SupervisorController extends Controller
      */
     public function index()
     {
-        //
+        $supervisors = Supervisor::all();
+        return view('supervisors.index', compact('supervisors'));
     }
 
     /**
