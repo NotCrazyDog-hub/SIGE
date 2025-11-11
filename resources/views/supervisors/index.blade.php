@@ -1,6 +1,6 @@
 <h1>Listagem de supervisores</h1>
 <a href="{{ route('supervisors.create') }}">+ Adicionar</a>
-@foreach ()
+@foreach ($supervisors as $supervisor)
     <p> | <a href="">✏</a> | <form action="" method="post">
         @csrf
         @method('DELETE') 
