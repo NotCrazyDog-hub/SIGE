@@ -58,7 +58,9 @@ class SupervisorController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $supervisor = Supervisor::findOrFail($id);
+        $supervisor->update($request->except(['_token', '_method']));
+        return redirect()->route('supervisors.index');
     }
 
     /**
