@@ -5,7 +5,6 @@
     <input type="text" name="name" value="{{ $supervisor->name }}">
     <br>
     <select name="department_id">
-        <option disabled selected>Selecione um departamento</option>
         @foreach ($departments as $department)
             <option value="{{ $department->id }}" {{ $department->id == $supervisor->department_id ? 'checked' : '' }}>{{ $department->name }}</option>
         @endforeach
