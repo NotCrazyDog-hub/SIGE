@@ -4,6 +4,7 @@
     <input type="text" name="name" placeholder="Insira o nome do supervisor">
     <br>
     <select name="department_id">
+        <option disabled selected>Selecione um departamento</option>
         @foreach ($departments as $department)
             <option value="{{ $department->id }}">{{ $department->name }}</option>
         @endforeach
