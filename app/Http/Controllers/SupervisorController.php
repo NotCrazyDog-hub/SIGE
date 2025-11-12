@@ -68,6 +68,8 @@ class SupervisorController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $supervisor = Supervisor::findOrFail($id);
+        $supervisor->delete();
+        return redirect()->back();
     }
 }
