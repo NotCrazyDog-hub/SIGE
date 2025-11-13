@@ -4,9 +4,7 @@
     @method('PUT')
     <input type="text" name="name" value="{{ $department->name }}">
     <br>
-    <input type="text" name="location" value="{{ $department->location }}">
-    <br>
-    <input type="text" name="manager" value="{{ $department->manager }}">
+    <input type="text" name="description" value="{{ $department->description }}">
     <br>
     <input type="submit" value="Atualizar">
 </form>
