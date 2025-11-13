@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InternController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\SupervisorController;
+use App\Http\Controllers\VacancyController;
 
 Route::get('/', function () {
     return view('welcome');
