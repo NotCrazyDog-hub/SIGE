@@ -11,6 +11,11 @@ class Department extends Model
         return $this->hasMany(Supervisor::class);
     }
 
+    public function vacancies()
+    {
+        return $this->hasMany(Vacancy::class);
+    }
+
     protected $fillable = [
         'name',
         'description',
