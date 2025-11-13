@@ -13,7 +13,8 @@ class VacancyController extends Controller
      */
     public function index()
     {
-        //
+        $vacancies = Vacancy::all();
+        return view('vacancies.index', compact('vacancies'));
     }
 
     /**
