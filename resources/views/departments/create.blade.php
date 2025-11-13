@@ -3,9 +3,7 @@
     @csrf
     <input type="text" name="name" placeholder="Insira o nome do departamento">
     <br>
-    <input type="text" name="location" placeholder="Insira a localização do departamento">
-    <br>
-    <input type="text" name="manager" placeholder="Insira o responsável pelo departamento">
+    <input type="text" name="description" placeholder="Insira a localização do departamento">
     <br>
     <input type="submit" value="Cadastrar">
 </form>
