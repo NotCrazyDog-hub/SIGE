@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Vacancy;
+use App\Models\Department;
 
 class VacancyController extends Controller
 {
