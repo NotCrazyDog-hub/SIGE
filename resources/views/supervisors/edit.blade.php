@@ -6,7 +6,7 @@
     <br>
     <select name="department_id">
         @foreach ($departments as $department)
-            <option value="{{ $department->id }}" {{ $department->id == $supervisor->department_id ? 'checked' : '' }}>{{ $department->name }}</option>
+            <option value="{{ $department->id }}" {{ $department->id == $supervisor->department_id ? 'selected' : '' }}>{{ $department->name }}</option>
         @endforeach
     </select>
     <br>
