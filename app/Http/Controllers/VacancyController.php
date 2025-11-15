@@ -22,7 +22,8 @@ class VacancyController extends Controller
      */
     public function create()
     {
-        //
+        $departments = Department::all();
+        return view('vacancies.create', compact('departments'));
     }
 
     /**
