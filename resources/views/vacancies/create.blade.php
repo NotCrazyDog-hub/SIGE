@@ -12,7 +12,7 @@
     <br>
     <textarea name="description"></textarea>
     <br>
-    <input type="text" name="workload" placeholder="Insira a carga horária">
+    <input type="number" name="workload" placeholder="Insira a carga horária">
     <br>
     <input type="submit" value="Cadastrar">
 </form>
