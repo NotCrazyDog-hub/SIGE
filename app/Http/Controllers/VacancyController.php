@@ -31,7 +31,8 @@ class VacancyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $vacancy = Vacancy::create($request->all());
+        return redirect()->route('vacancies.index');
     }
 
     /**
