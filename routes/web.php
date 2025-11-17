@@ -52,5 +52,5 @@ Route::get('/vacancies/create', [VacancyController::class, 'create'])->name('vac
 Route::post('/vacancies', [VacancyController::class, 'store'])->name('vacancies.store');
 Route::get('/vacancies/{vacancy}', [VacancyController::class, 'show'])->name('vacancies.show');
 Route::get('/vacancies/{vacancy}/edit', [VacancyController::class, 'edit'])->name('vacancies.edit');
-Route::put('/supervisors/{vacancy}', [VacancyController::class, 'update'])->name('vacancies.update');
+Route::put('/vacancies/{vacancy}', [VacancyController::class, 'update'])->name('vacancies.update');
 Route::delete('/vacancies/{vacancy}', [VacancyController::class, 'destroy'])->name('vacancies.destroy');
