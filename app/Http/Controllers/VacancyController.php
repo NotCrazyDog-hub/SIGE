@@ -58,7 +58,9 @@ class VacancyController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $vacancy = Vacancy::findOrFail($id);
+        $vacancy->update($request->except(['_token', '_method']));
+        return redirect()->route('vacancies.index');
     }
 
     /**
