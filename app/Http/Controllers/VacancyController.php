@@ -68,6 +68,8 @@ class VacancyController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $vacancy = Vacancy::findOrFail($id);
+        $vacancy->delete();
+        return redirect()->back();
     }
 }
