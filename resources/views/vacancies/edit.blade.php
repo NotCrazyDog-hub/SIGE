@@ -7,7 +7,7 @@
     <select name="department_id">
         <option disabled selected>Selecione um departamento</option>
         @foreach ($departments as $department)
-            <option value="{{ $department->id }}" {{ $department->id == $supervisor->department_id ? 'selected' : '' }}>{{ $department->name }}</option>
+            <option value="{{ $department->id }}" {{ $department->id == $vacancy->department_id ? 'selected' : '' }}>{{ $department->name }}</option>
         @endforeach
     </select>
     <br>
