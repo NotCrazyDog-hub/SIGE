@@ -48,7 +48,9 @@ class VacancyController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $departments = Department::all();
+        $vacancy = Vacancy::findOrFail($id);
+        return view('vacancies.create', compact('vacancy', 'departments'));
     }
 
     /**
