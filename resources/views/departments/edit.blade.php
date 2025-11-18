@@ -4,7 +4,7 @@
     @method('PUT')
     <input type="text" name="name" value="{{ $department->name }}">
     <br>
-    <input type="text" name="description" value="{{ $department->description }}">
+    <textarea name="description">{{ $department->description }}</textarea>
     <br>
     <input type="submit" value="Atualizar">
 </form>
