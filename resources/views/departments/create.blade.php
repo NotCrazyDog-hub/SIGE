@@ -3,7 +3,7 @@
     @csrf
     <input type="text" name="name" placeholder="Insira o nome do departamento">
     <br>
-    <input type="text" name="description" placeholder="Insira a descrição do departamento">
+    <textarea name="description" placeholder="Insira a descrição do departamento"></textarea>
     <br>
     <input type="submit" value="Cadastrar">
 </form>
