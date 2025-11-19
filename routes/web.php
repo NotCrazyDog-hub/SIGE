@@ -31,3 +31,5 @@ Route::resource('departments', DepartmentController::class);
 Route::resource('supervisors', SupervisorController::class);
 
 Route::resource('vacancies', VacancyController::class);
+
+Route::resource('reports', ReportController::class);
