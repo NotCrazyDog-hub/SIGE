@@ -10,4 +10,11 @@ class Report extends Model
     {
         return $this->belongsTo(Intern::class);
     }
+
+    protected $fillable = [
+        'intern_id',
+        'title',
+        'grade',
+        'work_description',
+    ];
 }
