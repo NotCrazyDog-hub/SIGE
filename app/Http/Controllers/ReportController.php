@@ -58,7 +58,9 @@ class ReportController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $report = Report::findOrFail($id);
+        $report->update($request->except('_token', '_method'));
+        return redirect()->route('reports.index');
     }
 
     /**
