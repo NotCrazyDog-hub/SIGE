@@ -68,6 +68,8 @@ class ReportController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $report = Report::findOrFail($id);
+        $report->delete();
+        return redirect()->route('reports.index');
     }
 }
