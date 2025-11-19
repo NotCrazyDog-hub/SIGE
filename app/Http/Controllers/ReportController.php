@@ -31,7 +31,8 @@ class ReportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $report = Report::create($request->all());
+        return redirect()->route('reports.index');
     }
 
     /**
