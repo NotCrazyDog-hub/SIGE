@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('intern_id')->constrained()->onDelete('cascade');
+            $table->string('title');
+            $table->unsignedTinyInteger('grade');
+            $table->text('work_description');
             $table->timestamps();
         });
     }
