@@ -6,6 +6,7 @@ use App\Http\Controllers\InternController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\SupervisorController;
 use App\Http\Controllers\VacancyController;
+use App\Http\Controllers\ReportController;
 
 Route::get('/', function () {
     return view('welcome');
