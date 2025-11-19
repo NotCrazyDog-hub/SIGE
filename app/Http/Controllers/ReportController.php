@@ -20,7 +20,8 @@ class ReportController extends Controller
      */
     public function create()
     {
-        //
+        $interns = Intern::all();
+        return view('reports.create', compact('interns'));
     }
 
     /**
