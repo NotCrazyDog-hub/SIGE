@@ -48,7 +48,9 @@ class ReportController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $interns = Intern::all();
+        $report = Report::findOrFail($id);
+        return view('reports.edit', compact('report', 'interns'));
     }
 
     /**
