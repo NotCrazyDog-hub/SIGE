@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Report;
+use App\Models\Intern;
 
 class ReportController extends Controller
 {
