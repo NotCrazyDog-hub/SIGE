@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Supervisor;
 use App\Models\Department;
+use App\Http\Requests\SupervisorRequest;
 
 class SupervisorController extends Controller
 {
