@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Report;
 use App\Models\Intern;
+use App\Http\Requests\ReportRequest;
 
 class ReportController extends Controller
 {
