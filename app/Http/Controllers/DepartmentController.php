@@ -27,7 +27,7 @@ class DepartmentController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(DepartmentRequest $request)
     {
         $department = Department::create($request->all());
         return redirect()->route('departments.index');
@@ -53,7 +53,7 @@ class DepartmentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(DepartmentRequest $request, string $id)
     {
         $department = Department::findOrFail($id);
         $department->update($request->except(['_token', '_method']));
