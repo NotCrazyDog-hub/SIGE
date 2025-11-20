@@ -29,4 +29,11 @@ class InternRequest extends FormRequest
             'status' => 'boolean',
         ];
     }
+    public function messages(): array
+    {
+        return [
+            'course.required' => 'O campo curso é obrigatório.',
+            'course.max' => 'O campo curso não pode ser superior a 255 caracteres.'
+        ];
+    }
 }
