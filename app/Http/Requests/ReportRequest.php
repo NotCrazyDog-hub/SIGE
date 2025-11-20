@@ -22,7 +22,10 @@ class ReportRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'intern_id' => 'required|exists:interns,id',
+            'title' => 'required|string|max:255',
+            'grade' => 'required|integer|min:0|max:10',
+            'work_description' => 'required|string|max:500'
         ];
     }
 }
