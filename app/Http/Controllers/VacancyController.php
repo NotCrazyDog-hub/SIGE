@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Vacancy;
 use App\Models\Department;
+use App\Http\Requests\VacancyRequest;
 
 class VacancyController extends Controller
 {
