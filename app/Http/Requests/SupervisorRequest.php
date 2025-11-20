@@ -22,7 +22,10 @@ class SupervisorRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string|min:3|max:255',
+            'email' => 'required|email|unique:supervisors,email,' . $this->route('supervisor'),
+            'phone' => 'nullable|string|max:20',
+            'department_id' => 'required|exists:departments,id'
         ];
     }
 }
