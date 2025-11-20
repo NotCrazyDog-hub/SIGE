@@ -11,7 +11,7 @@
         @endforeach
     </select>
     <br>
-    <textarea>{{ $vacancy->description}}</textarea>
+    <textarea name="description">{{ $vacancy->description}}</textarea>
     <br>
     <input type="number" name="workload" value="{{ $vacancy->workload }}">
     <br>
