@@ -1,6 +1,7 @@
 <h1>Edição de relatórios</h1>
 <form action="{{ route('reports.update', ['report' => $report->id]) }}" method="post">
     @csrf
+    @method('PUT')
     <input type="text" name="title" value="{{ $report->title }}">
     <br>
     <select name="intern_id">
