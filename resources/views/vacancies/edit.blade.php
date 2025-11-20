@@ -3,12 +3,12 @@
     @csrf
     @method('PUT')
     @error('title')
-        <<p>{{ $message }}</p>
+        <p>{{ $message }}</p>
     @enderror
     <input type="text" name="title" value="{{ $vacancy->title }}">
     <br>
     @error('department_id')
-        <<p>{{ $message }}</p>
+        <p>{{ $message }}</p>
     @enderror
     <select name="department_id">
         <option disabled selected>Selecione um departamento</option>
@@ -17,13 +17,13 @@
         @endforeach
     </select>
     @error('description')
-        <<p>{{ $message }}</p>
+        <p>{{ $message }}</p>
     @enderror
     <br>
     <textarea name="description">{{ $vacancy->description}}</textarea>
     <br>
     @error('workload')
-        <<p>{{ $message }}</p>
+        <p>{{ $message }}</p>
     @enderror
     <input type="text" name="workload" value="{{ $vacancy->workload }}">
     <br>
