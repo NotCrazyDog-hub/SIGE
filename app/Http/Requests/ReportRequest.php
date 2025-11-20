@@ -28,4 +28,17 @@ class ReportRequest extends FormRequest
             'work_description' => 'required|string|max:500'
         ];
     }
+    public function messages(): array
+    {
+        return [
+            'intern_id.required' => 'O estagiário é obrigatório.',
+            'intern_id.exists' => 'O estagiário selecionado é inválido.',
+            'grade.required' => 'A nota é obrigatória.',
+            'grade.integer' => 'A nota deve ser um número inteiro.',
+            'grade.min' => 'A nota mínima é 0.',
+            'grade.max' => 'A nota máxima é 10.',
+            'work_description.required' => 'A descrição do trabalho é obrigatória.',
+            'work_description.max' => 'A descrição do trabalho não pode exceder 500 caracteres.'
+        ];
+    }
 }
