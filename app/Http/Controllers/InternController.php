@@ -28,7 +28,7 @@ class InternController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(InternRequest $request)
     {
         $intern = Intern::create($request->all());
         return redirect()->route('interns.index');
@@ -54,7 +54,7 @@ class InternController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(InternRequest $request, string $id)
     {
         $intern = Intern::findOrFail($id);
         $intern->update($request->except('_token', '_method'));
