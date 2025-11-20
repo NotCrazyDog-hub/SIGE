@@ -10,7 +10,7 @@
         @endforeach
     </select>
     <br>
-    <textarea name="description"></textarea>
+    <textarea name="description" placeholder="Insira a descrição da vaga"></textarea>
     <br>
     <input type="number" name="workload" placeholder="Insira a carga horária">
     <br>
