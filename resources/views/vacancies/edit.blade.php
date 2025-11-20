@@ -13,7 +13,7 @@
     <br>
     <textarea name="description">{{ $vacancy->description}}</textarea>
     <br>
-    <input type="number" name="workload" value="{{ $vacancy->workload }}">
+    <input type="text" name="workload" value="{{ $vacancy->workload }}">
     <br>
     <input type="submit" value="Atualizar">
 </form>
