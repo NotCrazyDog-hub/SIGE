@@ -29,7 +29,7 @@ class VacancyController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(VacancyRequest $request)
     {
         $vacancy = Vacancy::create($request->all());
         return redirect()->route('vacancies.index');
@@ -56,7 +56,7 @@ class VacancyController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(VacancyRequest $request, string $id)
     {
         $vacancy = Vacancy::findOrFail($id);
         $vacancy->update($request->except(['_token', '_method']));
