@@ -28,4 +28,11 @@ class SupervisorRequest extends FormRequest
             'department_id' => 'required|exists:departments,id'
         ];
     }
+    public function messages(): array
+    {
+        return [
+            'department_id.required' => 'O departamento é obrigatório.',
+            'department_id.exists' => 'O departamento selecionado é inválido.'
+        ];
+    }
 }
