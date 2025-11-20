@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('department_id')->constrained()->onDelete('cascade');
             $table->string('title');
             $table->text('description');
-            $table->integer('workload');
+            $table->string('workload');
             $table->timestamps();
         });
     }
