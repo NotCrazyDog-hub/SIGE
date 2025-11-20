@@ -29,7 +29,7 @@ class ReportController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ReportRequest $request)
     {
         $report = Report::create($request->all());
         return redirect()->route('reports.index');
@@ -56,7 +56,7 @@ class ReportController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ReportRequest $request, string $id)
     {
         $report = Report::findOrFail($id);
         $report->update($request->except('_token', '_method'));
