@@ -22,7 +22,10 @@ class VacancyRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required|string|max:255',
+            'description' => 'required|string|max:500',
+            'department_id' => 'required|exists:departments,id',
+            'workload' => 'required|string|max:5',
         ];
     }
 }
