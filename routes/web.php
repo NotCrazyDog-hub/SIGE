@@ -22,14 +22,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::middleware('auth')->group(function () {
+    Route::resource('interns', InternController::class);
+    Route::resource('departments', DepartmentController::class);
+    Route::resource('supervisors', SupervisorController::class);
+    Route::resource('vacancies', VacancyController::class);
+    Route::resource('reports', ReportController::class);
+});
+
 require __DIR__.'/auth.php';
-
-Route::resource('interns', InternController::class);
-
-Route::resource('departments', DepartmentController::class);
-
-Route::resource('supervisors', SupervisorController::class);
-
-Route::resource('vacancies', VacancyController::class);
-
-Route::resource('reports', ReportController::class);
