@@ -63,9 +63,14 @@ class ReportController extends Controller
      */
     public function update(ReportRequest $request, string $id)
     {
-        $report = Report::findOrFail($id);
-        $report->update($request->except('_token', '_method'));
-        return redirect()->route('reports.index');
+        try {
+            $report = Report::findOrFail($id);
+            $report->update($request->except('_token', '_method'));
+            return redirect()->route('reports.index')->with('success', 'Relatório editado com sucesso!');
+        } 
+        catch (Exception $e) {
+            return redirect()->back()->with('error', 'Não foi possível editar seu relatório. Tente novamente.');
+        }
     }
 
     /**
