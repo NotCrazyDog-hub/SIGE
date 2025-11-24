@@ -1,4 +1,7 @@
 <h1>Edição de supervisores</h1>
+@if( session('error') )
+    <p>{{ session('error') }}</p>
+@endif
 <form action="{{ route('supervisors.update', ['supervisor' => $supervisor->id]) }}" method="post">
     @csrf
     @method('PUT')
