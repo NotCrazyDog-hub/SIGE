@@ -1,4 +1,7 @@
 <h1>Registro de relatórios</h1>
+@if( session('error') )
+    <p>{{ session('error') }}</p>
+@endif
 <form action="{{ route('reports.store') }}" method="post">
     @csrf
      @error('title')
