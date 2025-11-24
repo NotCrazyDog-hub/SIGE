@@ -1,4 +1,7 @@
 <h1>Edição de relatórios</h1>
+@if( session('error') )
+    <p>{{ session('error') }}</p>
+@endif
 <form action="{{ route('reports.update', ['report' => $report->id]) }}" method="post">
     @csrf
     @method('PUT')
