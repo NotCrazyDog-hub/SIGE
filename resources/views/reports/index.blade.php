@@ -1,4 +1,7 @@
 <h1>Listagem de relatórios</h1>
+@if( session('success') )
+    <p>{{ session('success') }}</p>
+@endif
 <a href="{{ route('reports.create') }}">+ Adicionar</a>
 @foreach ($reports as $report)
     <p> {{ $report->title}} {{ $report->created_at->diffForHumans() }} | <a href="{{ route('reports.edit', ['report' => $report->id]) }}">✏</a> | <form action="{{ route('reports.destroy', ['report' => $report->id]) }}" method="post">
