@@ -63,9 +63,14 @@ class SupervisorController extends Controller
      */
     public function update(SupervisorRequest $request, string $id)
     {
-        $supervisor = Supervisor::findOrFail($id);
-        $supervisor->update($request->except(['_token', '_method']));
-        return redirect()->route('supervisors.index');
+        try {
+            $supervisor = Supervisor::findOrFail($id);
+            $supervisor->update($request->except(['_token', '_method']));
+            return redirect()->route('supervisors.index')->with('success', 'Supervisor editado com sucesso!');
+        }
+        catch (Exception $e) {
+            return redirect()->back()->with('error', 'Mão foi possível editar o supervisor. Tente novamente.');
+        }
     }
 
     /**
