@@ -25,7 +25,7 @@
     @error('workload')
         <p>{{ $message }}</p>
     @enderror
-    <input type="text" name="workload" value="{{ $vacancy->workload }}">
+    <input type="number" name="workload" value="{{ $vacancy->workload }}">
     <br>
     <input type="submit" value="Atualizar">
 </form>

@@ -24,7 +24,7 @@
     @error('workload')
         <p>{{ $message }}</p>
     @enderror
-    <input type="text" name="workload" placeholder="Insira a carga horária">
+    <input type="number" name="workload" placeholder="Insira a carga horária">
     <br>
     <input type="submit" value="Cadastrar">
 </form>
