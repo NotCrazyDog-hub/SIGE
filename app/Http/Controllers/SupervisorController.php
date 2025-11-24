@@ -31,8 +31,13 @@ class SupervisorController extends Controller
      */
     public function store(SupervisorRequest $request)
     {
-        $supervisor = Supervisor::create($request->all());
-        return redirect()->route('supervisors.index');
+        try {
+            $supervisor = Supervisor::create($request->all());
+            return redirect()->route('supervisors.index')->with('success', 'Supervisor cadastrado com sucesso!');
+        }
+        catch (Exception $e) {
+            return redirect()->back()->with('error', 'Mão foi possível cadastrar o supervisor. Tente novamente.');
+        }
     }
 
     /**
