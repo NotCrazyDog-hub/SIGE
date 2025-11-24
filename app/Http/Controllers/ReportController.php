@@ -31,8 +31,13 @@ class ReportController extends Controller
      */
     public function store(ReportRequest $request)
     {
-        $report = Report::create($request->all());
-        return redirect()->route('reports.index');
+        try {
+            $report = Report::create($request->all());
+            return redirect()->route('reports.index')->with('sucess', 'Relatório registrado com sucesso!');
+        } 
+        catch (Exception $e) {
+            return redirect()->back()->with('error', 'Não foi possível registrar seu relatório. Tente novamente.');
+        }
     }
 
     /**
