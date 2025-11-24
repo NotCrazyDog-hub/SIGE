@@ -1,4 +1,7 @@
 <h1>Cadastro de supervisores</h1>
+@if( session('error') )
+    <p>{{ session('error') }}</p>
+@endif
 <form action="{{ route('supervisors.store') }}" method="post">
     @csrf
     @error('name')
