@@ -29,8 +29,13 @@ class InternController extends Controller
      */
     public function store(InternRequest $request)
     {
-        $intern = Intern::create($request->all());
-        return redirect()->route('interns.index');
+        try {
+            $intern = Intern::create($request->all());
+            return redirect()->route('interns.index')->with('success', 'Estagiário cadastrado com sucesso!');
+        }
+        catch (Exception $e) {
+            return redirect()->back()->with('error', 'Não foi possível cadastrar o estagiário. Tente novamente.');
+        }
     }
 
     /**
