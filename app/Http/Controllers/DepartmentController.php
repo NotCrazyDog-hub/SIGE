@@ -60,9 +60,14 @@ class DepartmentController extends Controller
      */
     public function update(DepartmentRequest $request, string $id)
     {
-        $department = Department::findOrFail($id);
-        $department->update($request->except(['_token', '_method']));
-        return redirect()->route('departments.index');
+        try {
+            $department = Department::findOrFail($id);
+            $department->update($request->except(['_token', '_method']));
+            return redirect()->route('departments.index')->with('success', 'Departamento editado com sucesso!');
+        }
+        catch (Exception $e) {
+            return redirect()->back()->with('error', 'Não foi possível editar o departamento. Tente novamente');
+        }
     }
 
     /**
