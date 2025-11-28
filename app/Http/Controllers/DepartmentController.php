@@ -29,8 +29,13 @@ class DepartmentController extends Controller
      */
     public function store(DepartmentRequest $request)
     {
-        $department = Department::create($request->all());
-        return redirect()->route('departments.index');
+        try {
+            $department = Department::create($request->all());
+            return redirect()->route('departments.index')->with('success', 'Departamento cadastrado com sucesso!');
+        }
+        catch (Exception $e) {
+            return redirect()->back()->with('error', 'Não foi possível cadastrar o departamento. Tente novamente');
+        }
     }
 
     /**
