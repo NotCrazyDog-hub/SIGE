@@ -60,9 +60,16 @@ class InternController extends Controller
      */
     public function update(InternRequest $request, string $id)
     {
-        $intern = Intern::findOrFail($id);
-        $intern->update($request->except('_token', '_method'));
-        return redirect()->route('interns.index');
+        try {
+            $intern = Intern::findOrFail($id);
+            $intern->update($request->except('_token', '_method'));
+            return redirect()->route('interns.index')->with('success', 'Estagiário editado com sucesso!');;
+        }
+        catch (Exception $e) {
+            return redirect()->back()->with('error', 'Não foi possível editar o estagiário. Tente novamente.');
+        }
+        
+        
     }
 
     /**
