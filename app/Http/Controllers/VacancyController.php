@@ -31,8 +31,13 @@ class VacancyController extends Controller
      */
     public function store(VacancyRequest $request)
     {
-        $vacancy = Vacancy::create($request->all());
-        return redirect()->route('vacancies.index');
+        try {
+            $vacancy = Vacancy::create($request->all());
+            return redirect()->route('vacancies.index')->with('success', 'Vaga cadastrada com sucesso!');
+        }
+        catch (Exception $e) {
+            return redirect()->back()->with('error', 'Não foi possível cadastrar a vaga. Tente novamente.');
+        }
     }
 
     /**
