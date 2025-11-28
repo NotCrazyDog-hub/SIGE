@@ -1,4 +1,7 @@
 <h1>Cadastro de departamentos</h1>
+@if( session('error') )
+    <p>{{ session('error') }}</p>
+@endif
 <form action="{{ route('departments.store') }}" method="post">
     @csrf
     @error('name')
