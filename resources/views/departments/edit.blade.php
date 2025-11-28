@@ -1,4 +1,7 @@
 <h1>Edição de departamentos</h1>
+@if( session('error') )
+    <p>{{ session('error') }}</p>
+@endif
 <form action="{{ route('departments.update', ['department' => $department->id]) }}" method="post">
     @csrf
     @method('PUT')
