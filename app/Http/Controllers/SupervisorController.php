@@ -35,7 +35,7 @@ class SupervisorController extends Controller
             $supervisor = Supervisor::create($request->all());
             return redirect()->route('supervisors.index')->with('success', 'Supervisor cadastrado com sucesso!');
         }
-        catch (Exception $e) {
+        catch (\Exception $e) {
             return redirect()->back()->with('error', 'Não foi possível cadastrar o supervisor. Tente novamente.');
         }
     }
@@ -68,7 +68,7 @@ class SupervisorController extends Controller
             $supervisor->update($request->except(['_token', '_method']));
             return redirect()->route('supervisors.index')->with('success', 'Supervisor editado com sucesso!');
         }
-        catch (Exception $e) {
+        catch (\Exception $e) {
             return redirect()->back()->with('error', 'Não foi possível editar o supervisor. Tente novamente.');
         }
     }

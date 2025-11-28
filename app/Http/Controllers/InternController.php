@@ -33,7 +33,7 @@ class InternController extends Controller
             $intern = Intern::create($request->all());
             return redirect()->route('interns.index')->with('success', 'Estagiário cadastrado com sucesso!');
         }
-        catch (Exception $e) {
+        catch (\Exception $e) {
             return redirect()->back()->with('error', 'Não foi possível cadastrar o estagiário. Tente novamente.');
         }
     }
@@ -65,7 +65,7 @@ class InternController extends Controller
             $intern->update($request->except('_token', '_method'));
             return redirect()->route('interns.index')->with('success', 'Estagiário editado com sucesso!');
         }
-        catch (Exception $e) {
+        catch (\Exception $e) {
             return redirect()->back()->with('error', 'Não foi possível editar o estagiário. Tente novamente.');
         }
     }

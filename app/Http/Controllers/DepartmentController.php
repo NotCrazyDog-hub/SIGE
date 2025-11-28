@@ -33,7 +33,7 @@ class DepartmentController extends Controller
             $department = Department::create($request->all());
             return redirect()->route('departments.index')->with('success', 'Departamento cadastrado com sucesso!');
         }
-        catch (Exception $e) {
+        catch (\Exception $e) {
             return redirect()->back()->with('error', 'Não foi possível cadastrar o departamento. Tente novamente');
         }
     }
@@ -65,7 +65,7 @@ class DepartmentController extends Controller
             $department->update($request->except(['_token', '_method']));
             return redirect()->route('departments.index')->with('success', 'Departamento editado com sucesso!');
         }
-        catch (Exception $e) {
+        catch (\Exception $e) {
             return redirect()->back()->with('error', 'Não foi possível editar o departamento. Tente novamente');
         }
     }

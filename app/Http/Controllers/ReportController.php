@@ -35,7 +35,7 @@ class ReportController extends Controller
             $report = Report::create($request->all());
             return redirect()->route('reports.index')->with('success', 'Relatório registrado com sucesso!');
         } 
-        catch (Exception $e) {
+        catch (\Exception $e) {
             return redirect()->back()->with('error', 'Não foi possível registrar seu relatório. Tente novamente.');
         }
     }
@@ -68,7 +68,7 @@ class ReportController extends Controller
             $report->update($request->except('_token', '_method'));
             return redirect()->route('reports.index')->with('success', 'Relatório editado com sucesso!');
         } 
-        catch (Exception $e) {
+        catch (\Exception $e) {
             return redirect()->back()->with('error', 'Não foi possível editar seu relatório. Tente novamente.');
         }
     }
