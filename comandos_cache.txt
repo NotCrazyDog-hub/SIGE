@@ -1,0 +1,14 @@
+php artisan cache:clear
+#limpa cache da aplicação
+
+php artisan config:clear
+#limpa cache de configuração
+
+php artisan route:clear
+#limpa cache de rotas
+
+php artisan view:clear
+#limpa cache de views
+
+php artisan optimize:clear
+#limpa tudo
