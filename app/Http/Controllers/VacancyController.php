@@ -63,9 +63,14 @@ class VacancyController extends Controller
      */
     public function update(VacancyRequest $request, string $id)
     {
-        $vacancy = Vacancy::findOrFail($id);
-        $vacancy->update($request->except(['_token', '_method']));
-        return redirect()->route('vacancies.index');
+        try {
+            $vacancy = Vacancy::findOrFail($id);
+            $vacancy->update($request->except(['_token', '_method']));
+            return redirect()->route('vacancies.index')->with('success', 'Vaga editada com sucesso!');
+        }
+        catch (Exception $e) {
+            return redirect()->back()->with('error', 'Não foi possível editar a vaga. Tente novamente.');
+        }
     }
 
     /**
