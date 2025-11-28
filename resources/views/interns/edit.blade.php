@@ -1,4 +1,7 @@
 <h1>Edição de estagiários</h1>
+@if( session('error') )
+    <p>{{ session('error') }}</p>
+@endif
 <form action="{{ route('interns.update', ['intern' => $intern->id]) }}" method="post">
     @csrf
     @method('PUT')
