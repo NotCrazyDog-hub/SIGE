@@ -5,15 +5,15 @@
 <form action="{{ route('departments.update', ['department' => $department->id]) }}" method="post">
     @csrf
     @method('PUT')
+    <input type="text" name="name" value="{{ $department->name }}">
     @error('name')
         <p>{{ $message }}</p>
     @enderror
-    <input type="text" name="name" value="{{ $department->name }}">
     <br>
+    <textarea name="description">{{ $department->description }}</textarea>
     @error('description')
         <p>{{ $message }}</p>
     @enderror
-    <textarea name="description">{{ $department->description }}</textarea>
     <br>
     <input type="submit" value="Atualizar">
 </form>

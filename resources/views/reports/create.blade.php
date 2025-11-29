@@ -4,30 +4,30 @@
 @endif
 <form action="{{ route('reports.store') }}" method="post">
     @csrf
-     @error('title')
-        <p>{{ $message }}</p>       
-    @enderror 
     <input type="text" name="title" placeholder="Insira o título do relatório">
-    <br>
-    @error('intern_id')
+    @error('title')
         <p>{{ $message }}</p>       
     @enderror 
+    <br> 
     <select name="intern_id">
         <option disabled selected>Selecione um estagiário</option>
         @foreach ($interns as $intern)
             <option value="{{ $intern->id }}">{{ $intern->name }}</option>
         @endforeach
     </select>
+    @error('intern_id')
+        <p>{{ $message }}</p>       
+    @enderror
     <br>
+    <textarea name="work_description" placeholder="Insira a descrição das atividades"></textarea>
     @error('work_description')
         <p>{{ $message }}</p>       
     @enderror 
-    <textarea name="work_description" placeholder="Insira a descrição das atividades"></textarea>
     <br>
+    <input type="number" name="grade" placeholder="Insira a nota das atividades">
     @error('grade')
         <p>{{ $message }}</p>       
     @enderror  
-    <input type="number" name="grade" placeholder="Insira a nota das atividades">
     <br>
     <input type="submit" value="Registrar">
 </form>
