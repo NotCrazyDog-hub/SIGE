@@ -36,7 +36,7 @@ class VacancyController extends Controller
             return redirect()->route('vacancies.index')->with('success', 'Vaga cadastrada com sucesso!');
         }
         catch (\Exception $e) {
-            return redirect()->back()->withInput()->with('error', 'Não foi possível cadastrar a vaga. Tente novamente.');
+            return redirect()->back()->with('error', 'Não foi possível cadastrar a vaga. Tente novamente.');
         }
     }
 

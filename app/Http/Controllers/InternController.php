@@ -34,7 +34,7 @@ class InternController extends Controller
             return redirect()->route('interns.index')->with('success', 'Estagiário cadastrado com sucesso!');
         }
         catch (\Exception $e) {
-            return redirect()->back()->withInput()->with('error', 'Não foi possível cadastrar o estagiário. Tente novamente.');
+            return redirect()->back()->with('error', 'Não foi possível cadastrar o estagiário. Tente novamente.');
         }
     }
 
@@ -66,7 +66,7 @@ class InternController extends Controller
             return redirect()->route('interns.index')->with('success', 'Estagiário editado com sucesso!');
         }
         catch (\Exception $e) {
-            return redirect()->back()->withInput()->with('error', 'Não foi possível editar o estagiário. Tente novamente.');
+            return redirect()->back()->with('error', 'Não foi possível editar o estagiário. Tente novamente.');
         }
     }
 

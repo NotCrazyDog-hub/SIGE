@@ -36,7 +36,7 @@ class ReportController extends Controller
             return redirect()->route('reports.index')->with('success', 'Relatório registrado com sucesso!');
         } 
         catch (\Exception $e) {
-            return redirect()->back()->withInput()->with('error', 'Não foi possível registrar seu relatório. Tente novamente.');
+            return redirect()->back()->with('error', 'Não foi possível registrar seu relatório. Tente novamente.');
         }
     }
 
@@ -69,7 +69,7 @@ class ReportController extends Controller
             return redirect()->route('reports.index')->with('success', 'Relatório editado com sucesso!');
         } 
         catch (\Exception $e) {
-            return redirect()->back()->withInput()->with('error', 'Não foi possível editar seu relatório. Tente novamente.');
+            return redirect()->back()->with('error', 'Não foi possível editar seu relatório. Tente novamente.');
         }
     }
 

@@ -34,7 +34,7 @@ class DepartmentController extends Controller
             return redirect()->route('departments.index')->with('success', 'Departamento cadastrado com sucesso!');
         }
         catch (\Exception $e) {
-            return redirect()->back()->withInput()->with('error', 'Não foi possível cadastrar o departamento. Tente novamente');
+            return redirect()->back()->with('error', 'Não foi possível cadastrar o departamento. Tente novamente');
         }
     }
 
@@ -66,7 +66,7 @@ class DepartmentController extends Controller
             return redirect()->route('departments.index')->with('success', 'Departamento editado com sucesso!');
         }
         catch (\Exception $e) {
-            return redirect()->back()->withInput()->with('error', 'Não foi possível editar o departamento. Tente novamente');
+            return redirect()->back()->with('error', 'Não foi possível editar o departamento. Tente novamente');
         }
     }
 
