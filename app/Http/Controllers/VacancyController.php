@@ -36,7 +36,7 @@ class VacancyController extends Controller
             return redirect()->route('vacancies.index')->with('success', 'Vaga cadastrada com sucesso!');
         }
         catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Não foi possível cadastrar a vaga. Tente novamente.');
+            return redirect()->back()->withInput()->with('error', 'Não foi possível cadastrar a vaga. Tente novamente.');
         }
     }
 
@@ -66,7 +66,7 @@ class VacancyController extends Controller
         try {
             $vacancy = Vacancy::findOrFail($id);
             $vacancy->update($request->except(['_token', '_method']));
-            return redirect()->route('vacancies.index')->with('success', 'Vaga editada com sucesso!');
+            return redirect()->route('vacancies.index')->withInput()->with('success', 'Vaga editada com sucesso!');
         }
         catch (\Exception $e) {
             return redirect()->back()->with('error', 'Não foi possível editar a vaga. Tente novamente.');

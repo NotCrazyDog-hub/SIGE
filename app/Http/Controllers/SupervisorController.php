@@ -36,7 +36,7 @@ class SupervisorController extends Controller
             return redirect()->route('supervisors.index')->with('success', 'Supervisor cadastrado com sucesso!');
         }
         catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Não foi possível cadastrar o supervisor. Tente novamente.');
+            return redirect()->back()->withInput()->with('error', 'Não foi possível cadastrar o supervisor. Tente novamente.');
         }
     }
 
@@ -69,7 +69,7 @@ class SupervisorController extends Controller
             return redirect()->route('supervisors.index')->with('success', 'Supervisor editado com sucesso!');
         }
         catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Não foi possível editar o supervisor. Tente novamente.');
+            return redirect()->back()->withInput()->with('error', 'Não foi possível editar o supervisor. Tente novamente.');
         }
     }
 
