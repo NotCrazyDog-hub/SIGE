@@ -11,10 +11,16 @@
         <div>
             <label for="email" class="text-sm">Email:</label>
             <input id="email" type="email" name="email" class="mt-1 w-full border rounded-md p-2 focus:border-blue-500">
+            @error('email')
+                <p class="text-sm text-red-600 mt-4">{{ $message }}</p>
+            @enderror
         </div>
         <div>
             <label for="password" class="text-sm">Senha:</label>
             <input id="password" type="password" name="password" class="mt-1 w-full border rounded-md p-2 focus:border-blue-500">
+            @error('password')
+                <p class="text-sm text-red-600 mt-4">{{ $message }}</p>
+            @enderror
         </div>
         <div class="flex items-center justify-between text-sm">
             <label class="flex items-center gap-2">
