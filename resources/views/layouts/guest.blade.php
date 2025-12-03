@@ -16,7 +16,7 @@
     </head>
     <body class="bg-gray-50 font-sans text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col items-center justify-center p-6">
-            <x-application-logo class="w-20 h-20 text-gray-600 mb-6" />
+            <img src="{{ asset('sige_logo.png') }}" class="w-40 h-40 mb-6" />
             @yield('content')
         </div>
     </body>
