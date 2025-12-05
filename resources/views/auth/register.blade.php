@@ -10,14 +10,14 @@
         @csrf
         <div>
             <label for="name" class="text-sm">Nome:</label>
-            <input id="name" type="text" name="name" class="mt-1 w-full border rounded-md p-2 focus:border-blue-500">
+            <input id="name" type="text" name="name" class="mt-1 w-full border rounded-md p-2 focus:border-blue-500" value="{{ old('name') }}">
             @error('name')
                 <p class="text-sm text-red-600 mt-4">{{ $message }}</p>
             @enderror
         </div>
         <div>
             <label for="email" class="text-sm">Email:</label>
-            <input id="email" type="email" name="email" class="mt-1 w-full border rounded-md p-2 focus:border-blue-500">
+            <input id="email" type="email" name="email" class="mt-1 w-full border rounded-md p-2 focus:border-blue-500" value="{{ old('email') }}">
             @error('email')
                 <p class="text-sm text-red-600 mt-4">{{ $message }}</p>
             @enderror
