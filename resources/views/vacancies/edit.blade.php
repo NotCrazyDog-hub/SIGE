@@ -5,27 +5,26 @@
 <form action="{{ route('vacancies.update', ['vacancy' => $vacancy->id]) }}" method="post">
     @csrf
     @method('PUT')
-    <input type="text" name="title" value="{{ $vacancy->title }}">
+    <input type="text" name="title" value="{{ old('title', $vacancy->title) }}">
     @error('title')
         <p>{{ $message }}</p>
     @enderror
     <br>
     <select name="department_id">
-        <option disabled selected>Selecione um departamento</option>
         @foreach ($departments as $department)
-            <option value="{{ $department->id }}" {{ $department->id == $vacancy->department_id ? 'selected' : '' }}>{{ $department->name }}</option>
+            <option value="{{ $department->id }}" {{ old('department_id', $vacancy->department_id) == $department->id ? 'selected' : '' }}>{{ $department->name }}</option>
         @endforeach
     </select>
     @error('department_id')
         <p>{{ $message }}</p>
     @enderror
     <br>
-    <textarea name="description">{{ $vacancy->description}}</textarea>
+    <textarea name="description">{{ old('description', $vacancy->description) }}</textarea>
     @error('description')
         <p>{{ $message }}</p>
     @enderror
     <br>
-    <input type="number" name="workload" value="{{ $vacancy->workload }}">
+    <input type="number" name="workload" value="{{ old('workload', $vacancy->workload) }}">
     @error('workload')
         <p>{{ $message }}</p>
     @enderror
