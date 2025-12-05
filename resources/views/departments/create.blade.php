@@ -4,12 +4,12 @@
 @endif
 <form action="{{ route('departments.store') }}" method="post">
     @csrf
-    <input type="text" name="name" placeholder="Insira o nome do departamento">
+    <input type="text" name="name" placeholder="Insira o nome do departamento" value="{{ old('name') }}">
     @error('name')
         <p>{{ $message }}</p>
     @enderror
     <br>
-    <textarea name="description" placeholder="Insira a descrição do departamento"></textarea>
+    <textarea name="description" placeholder="Insira a descrição do departamento" value="{{ old('description') }}"></textarea>
     @error('description')
         <p>{{ $message }}</p>
     @enderror
