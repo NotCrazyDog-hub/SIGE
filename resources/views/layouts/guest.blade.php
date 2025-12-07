@@ -14,7 +14,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="bg-gray-50 font-sans text-gray-900 antialiased">
+    <body class="bg-gray-100 font-sans text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col items-center justify-center p-6">
             <img src="{{ asset('sige_logo.png') }}" class="w-40 h-40 mb-2" />
             @yield('content')
