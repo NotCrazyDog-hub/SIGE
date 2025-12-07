@@ -1,31 +1,26 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-        {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
-    </div>
+@extends('layouts.guest')
+
+@section('title', 'Verificar Email')
+
+@section('content')
+<div class="w-full max-w-sm bg-white p-6 rounded-lg shadow-lg">
+    <h2 class="text-center text-xl font-semibold">Verifique seu email</h2>
+    <p class="text-sm text-gray-600 mb-6">Obrigado por se registrar! Antes de começar a usar o sistema, confirme seu endereço de e-mail clicando no link que enviamos. Caso não tenha recebido, você pode solicitar um novo abaixo.</p>
 
     @if (session('status') == 'verification-link-sent')
-        <div class="mb-4 font-medium text-sm text-green-600 dark:text-green-400">
-            {{ __('A new verification link has been sent to the email address you provided during registration.') }}
-        </div>
+        <p class="mb-4 text-sm text-green-600">Um novo link de verificação foi enviado para o seu e-mail.</p>
     @endif
 
     <div class="mt-4 flex items-center justify-between">
         <form method="POST" action="{{ route('verification.send') }}">
             @csrf
-
-            <div>
-                <x-primary-button>
-                    {{ __('Resend Verification Email') }}
-                </x-primary-button>
-            </div>
+            <button type="submit" class="py-2 px-3 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700">Reenviar e-mail de verificação</button>
         </form>
-
         <form method="POST" action="{{ route('logout') }}">
             @csrf
-
-            <button type="submit" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
-                {{ __('Log Out') }}
-            </button>
+            <button type="submit" class="text-sm text-gray-600 hover:text-gray-900 underline">Sair</button>
         </form>
     </div>
-</x-guest-layout>
+
+</div>
+@endsection
