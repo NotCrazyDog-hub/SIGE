@@ -25,7 +25,7 @@ class VacancyRequest extends FormRequest
             'title' => 'required|string|max:255',
             'description' => 'required|string|max:500',
             'department_id' => 'required|exists:departments,id',
-            'workload' => 'required|integer|max:5',
+            'workload' => 'required|integer|max:168',
         ];
     }
     public function messages(): array
