@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page_title', 'Estagiários')
+@section('page_title')
 
 @section('content')
 
