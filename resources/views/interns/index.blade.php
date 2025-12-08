@@ -33,7 +33,7 @@
                     <td class="p-3 text-center border-r">{{ $intern->name }}</td>
                     <td class="p-3 text-center border-r">{{ $intern->email }}</td>
                     <td class="p-3 text-center border-r">{{ $intern->course }}</td>
-                    <td class="p-3 text-center border-r">{{ $intern->phone }}</td>
+                    <td class="p-3 text-center border-r">{{ $intern->phone == NULL ? 'Não informado' : $intern->phone }}</td>
                     <td class="p-3 text-center border-r">{{ $intern->status == 1 ? 'Ativo' : 'Inativo' }}</td>
                     <td class="p-3">
                         <div class="flex items-center gap-3">

@@ -32,7 +32,7 @@
                     <td class="p-3 text-center border-r">{{ $supervisor->name }}</td>
                     <td class="p-3 text-center border-r">{{ $supervisor->department->name }}</td>
                     <td class="p-3 text-center border-r">{{ $supervisor->email }}</td>
-                    <td class="p-3 text-center border-r">{{ $supervisor->phone }}</td>
+                    <td class="p-3 text-center border-r">{{ $supervisor->phone == NULL ? 'Não informado' : $supervisor->phone }}</td>
                     <td class="p-3">
                         <div class="flex items-center gap-3">
                             <a href="{{ route('supervisors.edit', ['supervisor' => $supervisor->id]) }}" class="text-center text-lg">✏</a>
