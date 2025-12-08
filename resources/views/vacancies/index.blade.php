@@ -29,7 +29,7 @@
             @foreach ($vacancies as $vacancy)
                 <tr class="border-b hover:bg-gray-100">
                     <td class="p-3 text-center border-r">{{ $vacancy->title }}</td>
-                    <td class="p-3 text-center border-r">{{ $vacancy->department->name }}</td>
+                    <td class="p-3 text-center border-r">{{ $vacancy->department?->name ?? '-' }}</td>
                     <td class="p-3 text-center border-r">{{ $vacancy->workload }}</td>
                     <td class="p-3">
                         <div class="flex items-center gap-3">

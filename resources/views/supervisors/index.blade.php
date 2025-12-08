@@ -30,7 +30,7 @@
             @foreach ($supervisors as $supervisor)
                 <tr class="border-b hover:bg-gray-100">
                     <td class="p-3 text-center border-r">{{ $supervisor->name }}</td>
-                    <td class="p-3 text-center border-r">{{ $supervisor->department->name }}</td>
+                    <td class="p-3 text-center border-r">{{ $supervisor->department?->name ?? '-' }}</td>
                     <td class="p-3 text-center border-r">{{ $supervisor->email }}</td>
                     <td class="p-3 text-center border-r">{{ $supervisor->phone == NULL ? 'Não informado' : $supervisor->phone }}</td>
                     <td class="p-3">

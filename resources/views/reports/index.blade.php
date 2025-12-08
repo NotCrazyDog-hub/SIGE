@@ -30,7 +30,7 @@
             @foreach ($reports as $report)
                 <tr class="border-b hover:bg-gray-100">
                     <td class="p-3 text-center border-r">{{ $report->title }}</td>
-                    <td class="p-3 text-center border-r">{{ $report->intern->name }}</td>
+                    <td class="p-3 text-center border-r">{{ $report->intern?->name ?? 'Estagiário removido' }}</td>
                     <td class="p-3 text-center border-r">{{ $report->grade }}</td>
                     <td class="p-3 text-center border-r">{{ $report->created_at->diffForHumans() }}</td>
                     <td class="p-3">
