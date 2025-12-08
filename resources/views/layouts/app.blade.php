@@ -27,11 +27,11 @@
 
             <nav class="p-4 flex flex-col gap-1 text-sm">
                 <a href="{{ route('dashboard') }}" class="px-3 py-2 rounded {{ request()->routeIs('dashboard') ? 'bg-blue-50 text-blue-600 font-semibold' : 'hover:bg-gray-100' }}" >Painel de Controle</a>
-                <a href="{{ route('interns.index') }}" class="px-3 py-2 rounded {{ request()->routeIs('interns.index') ? 'bg-blue-50 text-blue-600 font-semibold' : 'hover:bg-gray-100' }}">Estagiários</a>
-                <a href="{{ route('vacancies.index') }}" class="px-3 py-2 rounded {{ request()->routeIs('vacancies.index') ? 'bg-blue-50 text-blue-600 font-semibold' : 'hover:bg-gray-100' }}" >Vagas</a>
-                <a href="{{ route('departments.index') }}" class="px-3 py-2 rounded {{ request()->routeIs('departments.index') ? 'bg-blue-50 text-blue-600 font-semibold' : 'hover:bg-gray-100' }}">Departamentos</a>
-                <a href="{{ route('supervisors.index') }}" class="px-3 py-2 rounded {{ request()->routeIs('supervisors.index') ? 'bg-blue-50 text-blue-600 font-semibold' : 'hover:bg-gray-100' }}">Supervisores</a>
-                <a href="{{ route('reports.index') }}" class="px-3 py-2 rounded {{ request()->routeIs('reports.index') ? 'bg-blue-50 text-blue-600 font-semibold' : 'hover:bg-gray-100' }}">Relatórios</a>
+                <a href="{{ route('interns.index') }}" class="px-3 py-2 rounded {{ request()->routeIs('interns.*') ? 'bg-blue-50 text-blue-600 font-semibold' : 'hover:bg-gray-100' }}">Estagiários</a>
+                <a href="{{ route('vacancies.index') }}" class="px-3 py-2 rounded {{ request()->routeIs('vacancies.*') ? 'bg-blue-50 text-blue-600 font-semibold' : 'hover:bg-gray-100' }}" >Vagas</a>
+                <a href="{{ route('departments.index') }}" class="px-3 py-2 rounded {{ request()->routeIs('departments.*') ? 'bg-blue-50 text-blue-600 font-semibold' : 'hover:bg-gray-100' }}">Departamentos</a>
+                <a href="{{ route('supervisors.index') }}" class="px-3 py-2 rounded {{ request()->routeIs('supervisors.*') ? 'bg-blue-50 text-blue-600 font-semibold' : 'hover:bg-gray-100' }}">Supervisores</a>
+                <a href="{{ route('reports.index') }}" class="px-3 py-2 rounded {{ request()->routeIs('reports.*') ? 'bg-blue-50 text-blue-600 font-semibold' : 'hover:bg-gray-100' }}">Relatórios</a>
 
                 <div class="border-t my-3"></div>
 
