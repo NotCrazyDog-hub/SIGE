@@ -34,7 +34,7 @@ class VacancyRequest extends FormRequest
             'department_id.required' => 'O departamento é obrigatório.',
             'department_id.exists' => 'O departamento selecionado é inválido.',
             'workload.required' => 'O campo carga horária é obrigatório.',
-            'workload.max' => 'O campo carga horária não pode exceder 5 caracteres.',
+            'workload.max' => 'O campo carga horária não pode exceder 168 horas semanais.',
         ];
     }
 }
